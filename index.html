@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Caitlyn's Terminal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="terminal">
+    <pre class="banner">
+ .d8888b.      db      88 d888888b 88    8b    d8 db   db
+d8'    88     d88b     88    88    88     Y8  8Y  88b  88
+88           d8'`8b    88    88    88      Y88Y   88V8o88
+88          d8'  `8b   88    88    88       YP    88 V888
+Y8'    8P  d8YaaaaY8b  88    88    88       88    88  V88
+ 'Y8888P' d8'      `8b 88    YP    8888888P 88    VP   VP
+    </pre>
+    <div id="output"></div>
+    <div id="input-line">
+      <span class="prompt">caitlyn@portfolio:~$</span>
+      <input id="command-input" type="text" autofocus autocomplete="off"/>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
