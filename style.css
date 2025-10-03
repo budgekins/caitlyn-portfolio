@@ -9,12 +9,18 @@ body {
 
 #terminal {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;          /* Center the terminal horizontally */
+  display: flex;
+  flex-direction: column;
 }
 
 .banner {
   color: #33ff33;
   margin-bottom: 20px;
+  text-align: center;      /* Center the text inside <pre> */
+  font-family: monospace;
+  font-size: 16px;         /* Optional: adjust as needed */
+  white-space: pre;        /* Preserve spacing of ASCII art */
 }
 
 #output {

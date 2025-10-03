@@ -10,6 +10,7 @@ const commands = {
   },
   ls: () => commands.help(),
   cd: () => appendLine("Heartbreak Chronicles Terminal"),
+  "cd ..": () => { window.location.href = "index.html"; return null; },
 };
 
 function appendLine(text) {
@@ -35,7 +36,7 @@ input.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     const cmd = input.value.trim();
     if (!cmd) return;
-    appendLine(`<span class="prompt">caitlyn@portfolio:~$</span> ${cmd}`);
+    appendLine(`<span class="prompt">caitlyn@heartbreak:~$</span> ${cmd}`);
     runCommand(cmd);  // handles output internally
     input.value = "";
     window.scrollTo(0, document.body.scrollHeight);
