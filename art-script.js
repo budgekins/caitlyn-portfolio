@@ -5,7 +5,7 @@ const galleryImg = document.getElementById("gallery-img");
 const galleryCaption = document.getElementById("gallery-caption");
 
 const artworks = [
-  { src: "art/last-unknown.jpg", caption: "The Last Unknown — charcoal and pencil" },
+  { src: "art/last-unknown.JPG", caption: "The Last Unknown — charcoal and pencil" },
   { src: "art/goddess-2.jpg", caption: "ink and pastel composition" },
   // { type: "text", caption: "--- archetype studies ---" },
   { src: "art/goddess.jpg", caption: "The Goddess — ink" },
