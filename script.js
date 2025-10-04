@@ -13,7 +13,6 @@ const commands = {
   // Redirect commands to separate pages
   music: () => { window.location.href = "music.html"; },
   art: () => { window.location.href = "art.html"; },
-  projects: () => { window.location.href = "projects.html"; },
   marathon: () => { window.location.href = "marathon.html"; },
   heartbreakchronicles: () => { window.location.href = "heartbreak.html"; },
   "heartbreak chronicles": () => { window.location.href = "heartbreak.html"; },
@@ -53,7 +52,12 @@ input.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     const cmd = input.value.trim();
     if (!cmd) return;
-    appendLine(`<span class="prompt">caitlyn@portfolio:~$</span> ${cmd}`);
+    
+    const navCommands = ["music", "art", "marathon", "heartbreakchronicles", "heartbreak chronicles"];
+    if (!navCommands.includes(cmd.toLowerCase())) {
+      appendLine(`<span class="prompt">caitlyn@home:~$</span> ${cmd}`);
+    }
+
     runCommand(cmd);  // handles output internally
     input.value = "";
     window.scrollTo(0, document.body.scrollHeight);

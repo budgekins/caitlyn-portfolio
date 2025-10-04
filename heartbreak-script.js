@@ -36,7 +36,12 @@ input.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
     const cmd = input.value.trim();
     if (!cmd) return;
-    appendLine(`<span class="prompt">caitlyn@heartbreak:~$</span> ${cmd}`);
+    
+    const navCommands = ["back", "cd .."];
+    if (!navCommands.includes(cmd.toLowerCase())) {
+      appendLine(`caitlyn@heartbreak:~$ ${cmd}`);
+    }
+    
     runCommand(cmd);  // handles output internally
     input.value = "";
     window.scrollTo(0, document.body.scrollHeight);

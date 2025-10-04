@@ -59,7 +59,11 @@ input.addEventListener("keydown", function(event) {
     const cmd = input.value.trim();
     if (!cmd) return;
 
-    appendLine(`<span class="prompt">${promptText}</span> ${cmd}`);
+    const navCommands = ["back", "cd .."];
+    if (!navCommands.includes(cmd.toLowerCase())) {
+      appendLine(`caitlyn@music:~$ ${cmd}`);
+    }
+
     runCommand(cmd);
     input.value = "";
     window.scrollTo(0, document.body.scrollHeight);
